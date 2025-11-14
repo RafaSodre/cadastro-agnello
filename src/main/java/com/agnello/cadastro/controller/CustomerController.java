@@ -22,7 +22,7 @@ public class CustomerController {
     public ResponseEntity<?> cadastrar(@RequestBody Cliente cliente, @RequestHeader(value = "X-API-KEY", required = false) String apiKey) {
         if (!apiKeyService.isValidApiKey(apiKey)) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-                    .body(Map.of("erro", "API Key inválida ou não fornecida"));
+                    .body(Map.of("erro", "API Key inválida ou não fornecida!"));
         }
 
         try {
