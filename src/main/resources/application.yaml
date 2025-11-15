@@ -3,7 +3,7 @@ spring:
     name: cadastro
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: ${DB_URL}
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
@@ -28,4 +28,3 @@ api:
 notification:
   service:
     url: ${URL_NOTIFICACAO}
-
